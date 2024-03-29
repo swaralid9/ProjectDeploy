@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Monitoring - Human Interaction</title>
+    <style>
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("https://media.istockphoto.com/id/537389352/photo/tropical-rainforest.webp?b=1&s=170667a&w=0&k=20&c=rPxzpapBr16QF47PWJ474qVXE1SjaRImJvt6pClavew=") no-repeat fixed;
+            background-size: cover;}
+
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3f0541;
+        }
+
+        p {
+            color: #3e1414;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 315px;
+            border-radius: 8px;
+        }
+
+        .slider-container {
+            margin-top: 20px;
+        }
+
+        input.slider {
+            width: 80%;
+            margin-right: 10px;
+        }
+
+      
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        section img, iframe, input.slider {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <h1>Human Interaction with Wildlife</h1>
+
+    <p>Welcome to our wildlife monitoring website's section on human interaction with wildlife. Explore the impact of human activities on the natural habitats of various species.</p>
+
+   
+
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_OL2c0lT-DM" frameborder="0" allowfullscreen></iframe>
+        <p>Watch this video to learn more about the impact of human activities on wildlife.</p>
+    </div>
+    <div>
+        <img src="https://media.istockphoto.com/id/483986906/photo/the-girl-and-lion-cub-south-africa-march-31-2015.webp?b=1&s=170667a&w=0&k=20&c=_dZkSCMCf4aGFDZHayQWMR2O1zNaoHl2hm6BYNKIF4U=" alt="Positive Human-Wildlife Interaction">
+        <p>Example of positive human-wildlife interaction in a protected habitat.</p>
+    </div>
+
+    <div>
+        <img src="https://media.istockphoto.com/id/1363753018/photo/elephant-behind-bars-at-the-zoo-animals-in-captivity.webp?b=1&s=170667a&w=0&k=20&c=aRSZrisUl4Q5tWUaHqHQeOMf_12hAOw4hpqUhaWdyd4=" alt="Negative Human-Wildlife Interaction">
+        <p>Caption: Illustration of negative human-wildlife interaction, highlighting potential threats to wildlife.</p>
+    </div>
+    <div class="slider-container">
+        <input type="range" min="0" max="100" value="50" class="slider" id="interactionSlider">
+        <p>Percentage of habitat affected by human interaction: <span id="interactionValue">50</span>%</p>
+    </div>
+
+    <script>
+        var slider = document.getElementById("interactionSlider");
+        var output = document.getElementById("interactionValue");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+    </script>
+
+</section>
+<!-- 
+<footer>
+    <p>&copy; 2024 Wildlife Monitoring. All rights reserved.</p>
+</footer> -->
+
+</body>
+</html>

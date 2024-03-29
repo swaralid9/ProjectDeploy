@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("https://media.istockphoto.com/id/537389352/photo/tropical-rainforest.webp?b=1&s=170667a&w=0&k=20&c=rPxzpapBr16QF47PWJ474qVXE1SjaRImJvt6pClavew=") no-repeat fixed;
+            background-size: cover;
+            color: antiquewhite;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border: 2px solid antiquewhite;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: antiquewhite;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <h1>Image Classification Results</h1>
+    <p>Image URL: {{ image_url }}</p>
+    <!-- <p>Predicted Class: {{ prediction }}</p> -->
+    <img src="{{ image_url }}" alt="Input Image">
+    <p>{{ message }}</p>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Wildlife Monitoring. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
