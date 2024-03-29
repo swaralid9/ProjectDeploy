@@ -3,6 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Monitoring</title>
+    <style>
+              body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("https://media.istockphoto.com/id/537389352/photo/tropical-rainforest.webp?b=1&s=170667a&w=0&k=20&c=rPxzpapBr16QF47PWJ474qVXE1SjaRImJvt6pClavew=") no-repeat fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #2f292f;
+            color: white;
+            padding: 9px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .main-content {
+            max-width: 800px;
+            margin: 120px auto;
+            padding: 20px;
+            color: aliceblue;
+            border-radius: 10px;
+        }
+
+        .predicted-image {
+            border: 2px solid red;
+            max-width: 100%;
+        }
+
+        footer {
+            background-color: #2f292f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid #4CAF50;
+            color: #4CAF50;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .loading-message-text {
+            color: yellow;
+            font-size: 18px;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                text-align: center;
+            }
+
+            nav li {
+                display: block;
+                margin: 30px 0;
+            }
+        }
+    </style>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var imageResultsBtn = document.getElementById("image-results-btn");
+        var loadingMessage = document.getElementById("loading-message");
+
+        imageResultsBtn.addEventListener("click", function () {
+            loadingMessage.innerHTML = '<p class="loading-message-text">Hang on! Your content is being loaded...</p>';
+            setTimeout(function () {
+                loadingMessage.innerHTML = '';
+
+            }, 30000);
+        });
+    });
+</script>
+</head>
+<body>
+<header>
+    <h1>Welcome to Wildlife Monitoring</h1>
+    <nav>
+        <ul>
+            <li><a id="image-results-btn" href="/results">Image Results</a></li>
+            <li><a href="/human">Human Interaction</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/blogs">Blogs</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="main-content">
+    <div id="loading-message"></div>
+    <h2>About Wildlife</h2>
+    <p>Explore the diverse wildlife captured in their natural habitats.</p></section>
+<script src="app.js"></script>
+</body>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Prediction</title>
 </head>
 <body>
@@ -12,5 +128,6 @@
         <input type="text" id="image_url" name="image_url" required>
         <button type="submit">Predict</button>
     </form>
+    
 </body>
-</html>
+</html> -->
